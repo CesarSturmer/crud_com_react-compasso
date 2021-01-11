@@ -10,7 +10,10 @@ try {
   }
 
   // Setup simple local storage wrapper
-  storage.set = (key, value) => localStorage.setItem(key, JSON.stringify(value));
+  storage.set = (key, value) => {
+    localStorage.setItem(key, value)
+    console.log(value)}
+  
   storage.get = (key) => {
     const item = localStorage.getItem(key);
     try {

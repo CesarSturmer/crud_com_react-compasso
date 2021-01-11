@@ -1,4 +1,14 @@
+
 .nav-button{
     margin: 5px;
     padding: 10px;
+}
+.list-button__action{
+    margin: 3px;
+}
+
+@media(max-width: 600px) {
+    #list-nav{
+        
+    }
 }

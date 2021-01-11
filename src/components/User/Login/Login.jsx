@@ -1,26 +1,30 @@
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import StoreContext from "components/Store/Context";
-import UIButton from "components/UI/Button/Button";
+//import { Spinner } from "react-bootstrap";
+
 
 import "./Login.css";
 
 import api from "service/api";
 
 function initialState() {
+  
   return { user: "", password: "" };
 }
 
 const UserLogin = () => {
-  const [setValues] = useState(initialState);
+  const [values, setValues] = useState(initialState);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
   const { setToken } = useContext(StoreContext);
   const history = useHistory();
 
+
   async function onSubmit(event) {
     event.preventDefault();
+   
+  
 
     await api
       .post("/autenticacao", {
@@ -29,24 +33,24 @@ const UserLogin = () => {
       })
       .then((res) => {
         setToken(res.data.token);
-        console.log(res.data.token);
-
         history.push("/users");
       })
-      .catch(() => {
-        setError(error);
-        setValues(initialState);
+      .catch(() => {        
+        alert('Usuário e senha não correspondem')
+        setValues(initialState)
+       
       });
   }
 
   return (
     <div className="user-login">
-      <h1 className="user-login__title">Acessar o Sistema</h1>
+      <h1 className="user-login__title">Login Sistema</h1>
       <form onSubmit={onSubmit}>
         <div className="user-login__form-control">
           <label htmlFor="user">Usuário</label>
           <input
             id="user"
+            placeholder="usuário"
             type="text"
             name="user"
             onChange={(e) => setUsername(e.target.value)}
@@ -57,21 +61,16 @@ const UserLogin = () => {
           <label htmlFor="password">Senha</label>
           <input
             id="password"
+            placeholder="senha"
             type="password"
             name="password"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
           />
         </div>
-        {error && <div className="user-login__error">{error}</div>}
-        <UIButton
-          type="submit"
-          theme="contained-green"
-          className="user-login__submit-button"
-          rounded
-        >
+        <button type="submit" className="user-login__submit-button">
           Entrar
-        </UIButton>
+        </button>
       </form>
     </div>
   );

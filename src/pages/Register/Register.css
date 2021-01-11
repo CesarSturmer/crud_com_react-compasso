@@ -1,0 +1,15 @@
+.nav-buttons{
+    display: flex;
+    margin: 5px;
+    padding: 5px; 
+    justify-content: center;
+    
+}
+
+.nav-buttons__action {
+    margin: 5px;
+    padding: 5px; 
+}
+.form-label{
+    color: white;
+}
