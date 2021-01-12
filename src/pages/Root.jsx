@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import StoreProvider from "components/Store/Provider";
-import Users from "./Users/Users";
-import Login from "./Login/Login";
-import Register from "./Register/Register"
+import Users from "./Users/index";
+import Login from "./Login/index";
+import Register from "./Register/index"
 
 
 

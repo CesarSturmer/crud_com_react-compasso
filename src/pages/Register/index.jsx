@@ -19,7 +19,7 @@ const PagesUsers = () => {
 
   async function updateUser(id) {
     const response = await api.get(`/usuarios/${id}`);
-       setName(response.data.nome);
+    setName(response.data.nome);
     setPassword(response.data.senha);
     setUser(response.data.usuario);
     setEmail(response.data.email);
@@ -55,6 +55,7 @@ const PagesUsers = () => {
             nome: name,
             sexo: gender,
             telefone: phone,
+            perfilId: contType,
           },
           header
         )
@@ -138,6 +139,7 @@ const PagesUsers = () => {
               as="select"
               name="perfilId"
               required
+              placeholder="Perfil usuário"
               value={contType}
               onChange={(e) => setContType(e.target.value)}
             >              
