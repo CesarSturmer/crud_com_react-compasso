@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O Projeto trata-se de uma ferramenta de gerenciamento de usuários, utilizando-se de CRUD e método de autenticação
+
+Para inicializar o projeto, é necessário inicializar um container no Docker com o seguinte comando:
+
+docker run -p 8090:8090 valdenirsantana/spring-api-alunos-bolsas:0.0.1-SNAPSHOT
 
 ## Available Scripts
 
