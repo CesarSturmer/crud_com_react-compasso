@@ -1,10 +1,13 @@
+# Compasso - Gerenciamento de Usuários
+
 O Projeto trata-se de uma ferramenta de gerenciamento de usuários, utilizando-se de CRUD e método de autenticação
 
 Para inicializar o projeto, é necessário inicializar um container no Docker com o seguinte comando:
 
-docker run -p 8090:8090 valdenirsantana/spring-api-alunos-bolsas:0.0.1-SNAPSHOT
+### docker run -p 8090:8090 valdenirsantana/spring-api-alunos-bolsas:0.0.1-SNAPSHOT
 
 Deve-se então instalar as dependências do projeto digitando:
+
 ### `yarn install`
 
 Pode-se então inicializar o projeto digitando:
