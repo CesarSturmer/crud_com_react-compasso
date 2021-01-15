@@ -4,6 +4,17 @@ Para inicializar o projeto, é necessário inicializar um container no Docker co
 
 docker run -p 8090:8090 valdenirsantana/spring-api-alunos-bolsas:0.0.1-SNAPSHOT
 
+Deve-se então instalar as dependências do projeto digitando:
+### `yarn install`
+
+Pode-se então inicializar o projeto digitando:
+### `yarn start`
+
+Login e Senha para testar o projeto:
+### `"usuario": "claudio.peixoto"` 
+### `"senha": "00000006"`
+
+
 ## Available Scripts
 
 In the project directory, you can run:
